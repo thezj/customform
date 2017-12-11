@@ -38,11 +38,6 @@ module.exports = {
         port: 8888
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
         extractCSS,
         extractLESS,
         // new UglifyJSPlugin(),

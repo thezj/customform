@@ -17,6 +17,9 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "0.11.2",
     "html-webpack-plugin": "2.30.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-webpack": "^2.0.6",
     "less": "3.0.0-alpha.3",
     "less-loader": "4.0.5",
     "lodash": "4.17.4",
@@ -35,5 +38,9 @@
   "scripts": {
     "build": "webpack --config build.js --progress --color",
     "dev": "webpack-dev-server --config dev.js --progress --color"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1"
   }
 }

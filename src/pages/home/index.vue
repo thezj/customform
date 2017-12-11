@@ -3,7 +3,7 @@
 
 
         <!-- 表单模板列表 -->
-        <div class="blockcss">
+        <div class="blockcss" style="height: 80px">
             <h3>表单模板</h3>
             <div>
                 <el-button type="text" v-for='(form,index) in formPatterns' @click='copyform(form,index)' :key='form.name'> {{form.name}}</el-button>
@@ -163,6 +163,24 @@
                         //是否换行
                         newLine: false,
                     }]
+                }, {
+                    name: '测试表单222',
+                    fields: [{
+                        //是否展示
+                        exhibit: true,
+                        //名称
+                        name: '测试字段',
+                        //输入类型
+                        type: 'input',
+                        //只读
+                        disable: false,
+                        //必填
+                        required: true,
+                        //宽度
+                        width: 50,
+                        //是否换行
+                        newLine: false,
+                    }]
                 }],
                 //根据表单模板生成的表单数据
                 dynamicform: null
@@ -182,6 +200,9 @@
                     this.dynamicform = temp
                 }
             }
+        },
+        mounted(){
+            window.vmindex = this
         },
         methods: {
             //当前编辑表单增加字段
