@@ -20,6 +20,7 @@ const router = new VueRouter({
   routes: routesList
 })
 
+
 //vuex配置
 const store = new Vuex.Store({
   state: {
@@ -42,3 +43,4 @@ var app = new Vue({
   },
   el: '#app'
 })
+

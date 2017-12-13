@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <img src="../../style/img/image.png">
 
         <!-- 表单模板列表 -->
         <div class="blockcss" style="height: 80px">
@@ -201,8 +201,9 @@
                 }
             }
         },
-        mounted(){
+        mounted() {
             window.vmindex = this
+            console.error('I get called from print.js!');
         },
         methods: {
             //当前编辑表单增加字段
@@ -267,6 +268,10 @@
             copyform(form, index) {
                 this.editingformindex = index
                 this.editingform = _.cloneDeep(form)
+                import ('moment').then(moment => {
+                    let mtime = moment(1513149165710)
+                    console.log(mtime.format('YYYY MM DD,HH mm ss'))
+                })
             }
         }
     }
